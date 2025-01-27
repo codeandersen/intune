@@ -107,7 +107,7 @@ if (Test-Path $csvFile) {
             continue
         }
 
-        Set-AutopilotDevice -id $AutopilotDevice.id -groupTag $GroupTag -m
+        Set-AutopilotDevice -id $AutopilotDevice.id -groupTag $GroupTag
 
         # Log to CSV
         Write-LogMessage -serialNumber $serialNumber -autopilotId $AutopilotDevice.id -message "GroupTag set to $GroupTag"
