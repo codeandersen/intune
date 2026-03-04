@@ -77,7 +77,7 @@ function Write-LogMessage {
     )
     $logFilePath = "./AutopilotLog.csv"
     if (-not (Test-Path $logFilePath)) {
-        "date,serialnumber,autopilotid,essage" | Out-File -FilePath $logFilePath
+        "date,serialnumber,autopilotid,message" | Out-File -FilePath $logFilePath
     }
     $logEntry = "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss'),$serialNumber,$autopilotId,$message"
     Add-Content -Path $logFilePath -Value $logEntry
